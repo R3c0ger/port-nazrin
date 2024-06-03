@@ -27,10 +27,8 @@ def argparser():
     parser.add_argument("--all", help=MSG['all_help'], action="store_true")
     parser.add_argument(
         "-w", "--workers", help=MSG['workers_help'],
-        type=int, default=1, choices=range(1, 1000), metavar="[1-1000]"
+        type=int, default=1, choices=range(1, 1001), metavar="[1-1000]"
     )
-    # TODO: 导出结果
-    # parser.add_argument("-o", "--output", help=MSG['output_help'])
     # TODO: 支持协议
     # parser.add_argument("-t", "--tcp", help="TCP协议", action="store_true")
     # parser.add_argument("-u", "--udp", help="UDP协议", action="store_true")
@@ -38,12 +36,12 @@ def argparser():
     # parser.add_argument("-s", "--speed", help="扫描速度", type=int, default=1, choices=range(1, 6))
     parser.add_argument("-v", "--version", help=MSG['version_help'], action="store_true")
     args = parser.parse_args()
+    # 春之岸边播放器正在播放曲目：
     LOGGER.debug(f"\n{args}\n")
     return args
 
 
 def main():
-    ascii_banner()
     args = argparser()
 
     # 版本信息
@@ -79,6 +77,14 @@ def main():
 
 
 if __name__ == "__main__":
+    ascii_banner()
+    if len(sys.argv) == 1:
+        print(f"{TITLE} - {VERSION}")
+        print(MSG['usage'])
+        # 等待用户输入参数
+        print(MSG['wait_input'])
+        args = input()
+        sys.argv.extend(args.split())
     try:
         main()
     except KeyboardInterrupt:

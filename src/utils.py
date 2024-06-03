@@ -4,6 +4,7 @@
 
 import random
 import re
+import sys
 
 from art import text2art
 from colorama import Fore, init
@@ -129,14 +130,14 @@ def extract_ip(arg_ip, arg_import_ip):
     # 若没有正确的IP，则退出程序
     if not ip_list:
         LOGGER.error(MSG['error_no_ip'])
-        exit(1)
+        sys.exit(1)
     # 若有错误的IP地址，让用户选择是否使用已经检查为正确的IP地址
     if exist_wrong_ip:
         LOGGER.error(MSG['error_ip_exist'])
         choice = input()
         # 默认为继续
         if choice.lower() == "n":
-            exit(1)
+            sys.exit(1)
     return ip_list
 
 
@@ -204,12 +205,12 @@ def extract_port(arg_port, arg_import_port):
     # 若没有正确的端口，则退出程序
     if not port_list:
         LOGGER.error(MSG['error_no_port'])
-        exit(1)
+        sys.exit(1)
     # 若有错误的端口，让用户选择是否使用已经检查为正确的端口
     if exist_wrong_port:
         LOGGER.error(MSG['error_port_exist'])
         choice = input()
         # 默认为继续
         if choice.lower() == "n":
-            exit(1)
+            sys.exit(1)
     return port_list

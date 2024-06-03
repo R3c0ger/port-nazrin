@@ -9,6 +9,8 @@ ERROR = f"[Error] "
 
 MSG = {
     # main.py
+    'usage': "usage: PortNazrin [-h] [-i IP [IP ...]] [-p PORT [PORT ...]] [-I IMPORT_IP] [-P IMPORT_PORT] [--all] [-w [1-1000]] [-v]",
+    'wait_input': "等待用户输入参数：",
     # 帮助内容
     'description': " - 简单的端口扫描器",
     'ip_help': "目标主机的IP地址。\n如“192.168.1.1”、“10.1.1.2,10.1.1.3“或“10.1.2.1-254”",
