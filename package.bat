@@ -1,0 +1,1 @@
+.\venv\Scripts\activate.bat && pyinstaller -F src/main.py -p src/
