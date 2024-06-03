@@ -1,1 +1,1 @@
-.\venv\Scripts\activate.bat && pyinstaller -F src/main.py -p src/
+.\venv\Scripts\activate.bat && pyinstaller -F src/main.py -n PortNazrin -p src/

@@ -8,7 +8,7 @@ from colorama import Fore, Back, Style
 
 
 TITLE = "PortNazrin"
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 
 # log_level = "debug"
 log_level = "info"
