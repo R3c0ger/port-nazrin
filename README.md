@@ -2,6 +2,8 @@
 
 A simple port scanner using python for educational purposes.
 
+有谁不喜欢可爱的小老鼠和春之岸边播放器呢？
+
 ## Installation
 
 ```bash
